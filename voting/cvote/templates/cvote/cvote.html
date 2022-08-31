@@ -1,0 +1,20 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<center>
+<body>
+    <table border="2">
+        <tr>
+            <td>CANDIDATE NAME</td>
+            <td>PARTY</td>
+            <td></td>
+        </tr>
+        {% for i in ok %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.party }}</td>
+            <td><a href="{% url 'vote' idd=i.candid_id %}">VOTE</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+{% endblock %}

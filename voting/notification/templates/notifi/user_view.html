@@ -1,0 +1,24 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<h1 align="center"><u>VIEW NOTIFICATION</u></h1>
+	<table align="center" border="2">
+		<tr>
+			<td>NOTIFICATION</td>
+			<td>DATE</td>
+			<td>TIME</td>
+
+		</tr>
+        {% for i in obj %}
+		<tr>
+
+			<td>{{ i.notification }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+
+		</tr>
+
+		</tr>
+        {% endfor %}
+	</table>
+
+{% endblock %}

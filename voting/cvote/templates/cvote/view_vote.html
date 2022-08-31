@@ -1,0 +1,16 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<table border="2" class="table-bordered">
+    <tr>
+    <td>candid_id</td>
+        <td>count</td>
+</tr>
+    {% for o in ok %}
+    <tr>
+        <td>{{ o.candid_id }}</td>
+        <td>{{ o.count }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

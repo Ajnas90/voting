@@ -1,0 +1,24 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<h1 align="center"><u>VIEW USER</u></h1>
+	<table align="center" border="2">
+		<tr>
+			<td>NAME</td>
+			<td>PHONE</td>
+			<td>ADDRESS</td>
+            <td>EMAIL</td>
+		</tr>
+        {% for i in obj %}
+		<tr>
+
+			<td>{{ i.username}}</td>
+			<td>{{ i.phone_no }}</td>
+			<td>{{ i.address }}</td>
+                <td>{{ i.email }}</td>
+        <td><a href="{% url 'aprv' idd=i.user_id %}#hh" class="btn btn-primary">Approve</a></td>
+			<td><a href="{% url 'reject' idd=i.user_id %}" class="btn btn-danger">reject</a></td>
+
+		</tr>
+        {% endfor %}
+	</table>
+{% endblock %}

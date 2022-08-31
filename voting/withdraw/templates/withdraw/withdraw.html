@@ -1,0 +1,28 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<h1 align="center"><u>WITHDRAW CANDIDATE</u></h1>
+	<table align="center" border="2">
+		<tr>
+			<td>NAME</td>
+			<td>PARTY</td>
+{#			<td>ADDRESS</td>#}
+            <td></td>
+{#            <td></td>#}
+{#            <td>EMAIL</td>#}
+{#            <td>STATUS</td>#}
+		</tr>
+        {% for i in obval%}
+		<tr>
+
+			<td>{{ i.candid_name }}</td>
+			<td>{{ i.party }}</td>
+{#			<td>{{ i.address }}</td>#}
+{#                <td>{{ i.email }}</td>#}
+{#            <td><a href="{% url 'aprv' idd=i.candid_id %}#hh" class="btn btn-primary">Approve</a></td>#}
+			<td><a href="{% url 'dlt' idd=i.w_id %}" class="btn btn-danger">delete</a></td>
+		</tr>
+
+		</tr>
+        {% endfor %}
+	</table>
+{% endblock %}

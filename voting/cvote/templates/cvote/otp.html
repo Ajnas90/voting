@@ -1,0 +1,14 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<form method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><input type="text" name="otp"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit"></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

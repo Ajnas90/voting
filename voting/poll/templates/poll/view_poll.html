@@ -1,0 +1,28 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<h1 align="center"><u>POLL TIMING</u></h1>
+	<table align="center" border="2">
+		<tr>
+			<td>Date</td>
+			<td>From-Time</td>
+			<td>To-Time</td>
+            <td></td>
+            <td></td>
+{#            <td>EMAIL</td>#}
+{#            <td>STATUS</td>#}
+		</tr>
+        {% for i in obj%}
+		<tr>
+
+			<td>{{ i.date }}</td>
+			<td>{{ i.from_time }}</td>
+			<td>{{ i.to_time }}</td>
+{#                <td>{{ i.email }}</td>#}
+{#            <td><a href="{% url 'aprv' idd=i.candid_id %}#hh" class="btn btn-primary">Approve</a></td>#}
+{#			<td><a href="{% url 'reject' idd=i.candid_id %}" class="btn btn-danger">reject</a></td>#}
+		</tr>
+
+		</tr>
+        {% endfor %}
+	</table>
+{% endblock %}

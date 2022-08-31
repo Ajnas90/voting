@@ -1,0 +1,30 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<h1 align="center"><u>VIEW CANDIDATE</u></h1>
+	<table align="center" border="2">
+		<tr>
+			<td>NAME</td>
+			<td>PARTY</td>
+			<td>ADDRESS</td>
+            <td>GENDER</td>
+            <td></td>
+            <td></td>
+{#            <td>EMAIL</td>#}
+{#            <td>STATUS</td>#}
+		</tr>
+        {% for i in obj %}
+		<tr>
+
+			<td>{{ i.name }}</td>
+			<td>{{ i.party }}</td>
+			<td>{{ i.address }}</td>
+            <td>{{ i.gender }}</td>
+{#                <td>{{ i.email }}</td>#}
+            <td><a href="{% url 'caprv' idd=i.candid_id %}#hh" class="btn btn-primary">Approve</a></td>
+			<td><a href="{% url 'crej' idd=i.candid_id %}" class="btn btn-danger">reject</a></td>
+		</tr>
+
+		</tr>
+        {% endfor %}
+	</table>
+{% endblock %}

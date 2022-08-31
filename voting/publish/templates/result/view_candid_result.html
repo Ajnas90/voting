@@ -1,0 +1,24 @@
+{% extends 'temp/candidate.html' %}
+{% block base %}
+<h1 align="center"><u>VIEW RESULT</u></h1>
+	<table align="center" border="2">
+		<tr>
+			<td>RESULT</td>
+			<td>DATE</td>
+			<td>TIME</td>
+
+		</tr>
+        {% for i in obj%}
+		<tr>
+
+			<td>{{ i.result }}</td>
+			<td>{{ i.candid_id }}</td>
+{#			<td>{{  }}</td>#}
+
+		</tr>
+
+		</tr>
+        {% endfor %}
+	</table>
+
+{% endblock %}
